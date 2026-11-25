@@ -113,7 +113,7 @@ function Navbar() {
     <nav className="navbar">
       <a href="#home" className="logo">
         <span className="logo-symbol">A.</span>
-        <span>BLE<span className="blue">SSED</span></span>
+        <span>BLES<span className="blue">SED</span></span>
       </a>
 
       <div className={`nav-links ${open ? "show" : ""}`}>
@@ -573,7 +573,7 @@ function Footer() {
     <footer className="footer">
       <a href="#home" className="logo">
         <span className="logo-symbol">A.</span>
-        ADED<span className="blue">OYIN</span>
+        BLES<span className="blue">SED</span>
       </a>
 
       <p>Designed & built by Blessed Akhigbe © {new Date().getFullYear()}</p>
