@@ -235,7 +235,7 @@ through automation, scalable infrastructure, and rock-solid reliability.
         }}
       >
         <img
-          src={`${import.meta.env.BASE_URL}blessed.jpg`}
+          src={`${import.meta.env.BASE_URL}blessed.png`}
           alt="Blessed Akhigbe"
           style={{
             width: "100%",
