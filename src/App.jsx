@@ -15,87 +15,93 @@ import {
   Cpu,
   ShieldCheck,
   GitBranch,
-  ExternalLink
+  ExternalLink,
 } from "lucide-react";
 import { FaGithub } from "react-icons/fa";
 import "./App.css";
 
-const CV_LINK = "https://docs.google.com/document/d/1VyWMDzuG_wxAvG4yOnwiB-SiQ9AwsNIfsNH-njeM-VI/edit?usp=sharing";
+const CV_LINK =
+  "https://docs.google.com/document/d/1VyWMDzuG_wxAvG4yOnwiB-SiQ9AwsNIfsNH-njeM-VI/edit?usp=sharing";
 
 const projects = [
   {
     number: "01",
     category: "CLOUD INFRASTRUCTURE",
     title: "Naija-votes on AWS",
-    description: "Designed and deployed an election simulation application infrastructure using Terraform, VPC networking, load balancing, Auto Scaling and RDS.",
+    description:
+      "Designed and deployed an election simulation application infrastructure using Terraform, VPC networking, load balancing, Auto Scaling and RDS.",
     stack: ["AWS", "Terraform", "EC2", "ALB", "RDS"],
-    icon: Cloud
+    icon: Cloud,
   },
   {
     number: "02",
     category: "MONITORING & OBSERVABILITY",
     title: "Robot Shop Monitoring",
-    description: "Implemented observability for a Kubernetes microservices application using metrics, logs, tracing and alerting.",
+    description:
+      "Implemented observability for a Kubernetes microservices application using metrics, logs, tracing and alerting.",
     stack: ["Kubernetes", "Prometheus", "Grafana", "Loki", "Jaeger"],
-    icon: Cpu
+    icon: Cpu,
   },
   {
     number: "03",
     category: "INFRASTRUCTURE MONITORING",
     title: "AWS Infrastructure Monitoring",
-    description: "Deployed Prometheus and Grafana on EC2 with Node Exporter to monitor server resource utilisation and infrastructure health.",
+    description:
+      "Deployed Prometheus and Grafana on EC2 with Node Exporter to monitor server resource utilisation and infrastructure health.",
     stack: ["AWS EC2", "Prometheus", "Grafana", "Linux"],
-    icon: Server
+    icon: Server,
   },
   {
     number: "04",
     category: "CONTAINER ORCHESTRATION",
     title: "Kubernetes Application",
-    description: "Containerised and deployed a multi-service voting application using Docker, Kubernetes and infrastructure automation.",
+    description:
+      "Containerised and deployed a multi-service voting application using Docker, Kubernetes and infrastructure automation.",
     stack: ["Docker", "Kubernetes", "Terraform", "GitHub Actions"],
-    icon: Container
+    icon: Container,
   },
   {
     number: "05",
     category: "CLOUD INFRASTRUCTURE",
     title: "Umbrella-hq",
-    description: "Designed and deployed an application infrastructure using Terraform, VPC networking, load balancing, Auto Scaling and RDS.",
-    stack: ["Azure","VM","Docker","Terraform", "GitHub Actions"],
-    icon: Cloud
-  }
+    description:
+      "Designed and deployed an application infrastructure using Terraform, VPC networking, load balancing, Auto Scaling and RDS.",
+    stack: ["Azure", "VM", "Docker", "Terraform", "GitHub Actions"],
+    icon: Cloud,
+  },
 ];
 
 const skillGroups = [
   {
     title: "Cloud Platforms",
     icon: Cloud,
-    skills: ["Amazon Web Services", "Microsoft Azure"]
+    skills: ["Amazon Web Services", "Microsoft Azure"],
   },
   {
     title: "Infrastructure & Automation",
     icon: Terminal,
-    skills: ["Terraform", "Ansible", "Linux", "Bash"]
+    skills: ["Terraform", "Ansible", "Linux", "Bash"],
   },
   {
     title: "Containers & Orchestration",
     icon: Container,
-    skills: ["Docker", "Kubernetes", "Helm"]
+    skills: ["Docker", "Kubernetes", "Helm"],
   },
   {
     title: "CI/CD & Version Control",
     icon: GitBranch,
-    skills: ["Git", "GitHub", "GitHub Actions"]
+    skills: ["Git", "GitHub", "GitHub Actions"],
   },
   {
     title: "Monitoring & Observability",
     icon: Cpu,
-    skills: ["Prometheus", "Grafana", "Loki", "Jaeger"]
+    skills: ["Prometheus", "Grafana", "Loki", "Jaeger"],
   },
   {
     title: "Programming & Databases",
     icon: Database,
-    skills: ["Python", "Bash", "SQL", "DynamoDB"]
-  }
+    skills: ["Python", "Bash", "SQL", "DynamoDB"],
+  },
 ];
 
 function Navbar() {
@@ -106,14 +112,16 @@ function Navbar() {
     ["Skills", "#skills"],
     ["Projects", "#projects"],
     ["Experience", "#experience"],
-    ["Contact", "#contact"]
+    ["Contact", "#contact"],
   ];
 
   return (
     <nav className="navbar">
       <a href="#home" className="logo">
         <span className="logo-symbol">A.</span>
-        <span>BLES<span className="blue">SED</span></span>
+        <span>
+          BLES<span className="blue">SED</span>
+        </span>
       </a>
 
       <div className={`nav-links ${open ? "show" : ""}`}>
@@ -176,16 +184,18 @@ function Hero() {
         </h1>
 
         <h2>
-          Building cloud Infrastructures,
+          Building Scalable cloud 
           <br />
-          Automating everything else!
+          Infrastructures, & Automating
+          <br />
+          Everything else!
         </h2>
 
         <p className="hero-description">
-         Cloud & DevOps engineer building infrastructure that scales, deploys itself,
-and stays up while you sleep.
-        I help teams ship faster, safer, and with fewer 2 a.m. pages
-through automation, scalable infrastructure, and rock-solid reliability.
+          I build cloud infrastructure that scales, deploys
+          itself, and stays up while you sleep. I help teams ship faster, safer,
+          and with fewer 2 a.m. pages through automation, scalable
+          infrastructure, and rock-solid reliability.
         </p>
 
         <div className="hero-buttons">
@@ -208,7 +218,11 @@ through automation, scalable infrastructure, and rock-solid reliability.
         </div>
 
         <div className="social-links">
-          <a href="https://github.com/pharmakarios1" target="_blank" rel="noreferrer">
+          <a
+            href="https://github.com/pharmakarios1"
+            target="_blank"
+            rel="noreferrer"
+          >
             <FaGithub size={19} /> GitHub
           </a>
 
@@ -231,7 +245,7 @@ through automation, scalable infrastructure, and rock-solid reliability.
           overflow: "hidden",
           borderRadius: "24px",
           border: "1px solid rgba(255,255,255,0.15)",
-          boxShadow: "0 25px 80px rgba(0,0,0,0.4)"
+          boxShadow: "0 25px 80px rgba(0,0,0,0.4)",
         }}
       >
         <img
@@ -241,7 +255,7 @@ through automation, scalable infrastructure, and rock-solid reliability.
             width: "100%",
             height: "100%",
             objectFit: "cover",
-            objectPosition: "center 25%"
+            objectPosition: "center 25%",
           }}
         />
 
@@ -253,11 +267,17 @@ through automation, scalable infrastructure, and rock-solid reliability.
             right: "0",
             padding: "24px",
             background: "linear-gradient(transparent, rgba(8,13,25,0.95))",
-            color: "#ffffff"
+            color: "#ffffff",
           }}
         >
           <span className="status-dot" />
-          <span style={{ marginLeft: "9px", fontSize: "12px", letterSpacing: "1px" }}>
+          <span
+            style={{
+              marginLeft: "9px",
+              fontSize: "12px",
+              letterSpacing: "1px",
+            }}
+          >
             CLOUD & DEVOPS ENGINEERING
           </span>
           <h3 style={{ margin: "10px 0 0", fontSize: "23px" }}>
@@ -298,32 +318,31 @@ function About() {
           </h3>
 
           <p>
-             I am Blessed Akhigbe, a Cloud & DevOps Engineer focused
-    on designing, deploying, and automating secure, scalable,
-    and resilient cloud infrastructure.
+            I am Blessed Akhigbe, a Cloud & DevOps Engineer focused on
+            designing, deploying, and automating secure, scalable, and resilient
+            cloud infrastructure.
           </p>
 
           <p>
-           My expertise spans AWS cloud infrastructure, Terraform,
-    Docker, Kubernetes, CI/CD automation, and infrastructure
-    monitoring. I build automated deployment workflows and
-    manage containerized environments that make software
-    delivery more reliable, efficient, and repeatable.
+            My expertise spans AWS cloud infrastructure, Terraform, Docker,
+            Kubernetes, CI/CD automation, and infrastructure monitoring. I build
+            automated deployment workflows and manage containerized environments
+            that make software delivery more reliable, efficient, and
+            repeatable.
           </p>
 
           <p>
-          I approach engineering with a passion for solving complex
-    infrastructure challenges, eliminating manual processes,
-    and turning ideas into practical, production-ready solutions.
-    For me, great engineering is about building systems that
-    work reliably, scale confidently, and create lasting impact.
+            I approach engineering with a passion for solving complex
+            infrastructure challenges, eliminating manual processes, and turning
+            ideas into practical, production-ready solutions. For me, great
+            engineering is about building systems that work reliably, scale
+            confidently, and create lasting impact.
           </p>
 
           <a href="#experience" className="text-link">
             Explore My Journey <ArrowUpRight size={16} />
           </a>
         </div>
-        
 
         <div className="about-stats">
           <div className="stat-card">
@@ -365,8 +384,8 @@ function Skills() {
       />
 
       <p className="section-description">
-        Technologies I use and continue to develop through hands-on
-        engineering projects and practical learning.
+        Technologies I use and continue to develop through hands-on engineering
+        projects and practical learning.
       </p>
 
       <div className="skills-grid">
@@ -386,7 +405,7 @@ function Skills() {
               <h3>{group.title}</h3>
 
               <div className="skill-tags">
-                {group.skills.map(skill => (
+                {group.skills.map((skill) => (
                   <span key={skill}>{skill}</span>
                 ))}
               </div>
@@ -408,12 +427,12 @@ function Projects() {
       />
 
       <p className="section-description">
-        Practical engineering projects demonstrating my experience
-        building, deploying and monitoring cloud infrastructure.
+        Practical engineering projects demonstrating my experience building,
+        deploying and monitoring cloud infrastructure.
       </p>
 
       <div className="projects-grid">
-        {projects.map(project => {
+        {projects.map((project) => {
           const Icon = project.icon;
 
           return (
@@ -434,7 +453,7 @@ function Projects() {
               <p className="project-description">{project.description}</p>
 
               <div className="project-stack">
-                {project.stack.map(item => (
+                {project.stack.map((item) => (
                   <span key={item}>{item}</span>
                 ))}
               </div>
@@ -471,10 +490,10 @@ function Experience() {
           <h3>Bincom Academy</h3>
           <h4>IT Infrastructure & DevOps Apprenticeship</h4>
           <p>
-            Gaining practical experience in IT infrastructure and DevOps
-            through hands-on technical projects, cloud infrastructure
-            assignments and automation. Also facilitating beginner-level
-            Infrastructure and DevOps learning sessions.
+            Gaining practical experience in IT infrastructure and DevOps through
+            hands-on technical projects, cloud infrastructure assignments and
+            automation. Also facilitating beginner-level Infrastructure and
+            DevOps learning sessions.
           </p>
         </div>
         <div className="timeline-item">
@@ -483,9 +502,9 @@ function Experience() {
           <h3>TS Academy</h3>
           <h4>DevOps Engineering Training</h4>
           <p>
-            Developed practical DevOps skills through project-based
-            learning, including containerisation, Kubernetes,
-            infrastructure automation and application monitoring.
+            Developed practical DevOps skills through project-based learning,
+            including containerisation, Kubernetes, infrastructure automation
+            and application monitoring.
           </p>
         </div>
 
@@ -495,9 +514,9 @@ function Experience() {
           <h3>Devops & Software Engineering</h3>
           <h4>Fullstack & DevOps Essentials</h4>
           <p>
-            Completed the AWS Cloud Practitioner Essentials learning
-            course, covering fundamental cloud concepts, AWS services,
-            security, architecture and cloud economics alongside fullstack engineering
+            Completed the AWS Cloud Practitioner Essentials learning course,
+            covering fundamental cloud concepts, AWS services, security,
+            architecture and cloud economics alongside fullstack engineering
           </p>
         </div>
         <div className="timeline-item">
@@ -506,16 +525,14 @@ function Experience() {
           <h3>Frontend Engineering & Web development</h3>
           <h4>Frontend Development Essentials</h4>
           <p>
-  Developed a strong foundation in web development, learning how
-  the internet works and how to build responsive, interactive,
-  and user-friendly web applications. Gained practical experience
-  with HTML, CSS, JavaScript, responsive web design, and modern
-  frontend development principles.
-  Worked on structuring web pages, styling interfaces, implementing
-  interactive functionality, debugging code, and translating design
-  concepts into functional user experiences.
-</p>
-
+            Developed a strong foundation in web development, learning how the
+            internet works and how to build responsive, interactive, and
+            user-friendly web applications. Gained practical experience with
+            HTML, CSS, JavaScript, responsive web design, and modern frontend
+            development principles. Worked on structuring web pages, styling
+            interfaces, implementing interactive functionality, debugging code,
+            and translating design concepts into functional user experiences.
+          </p>
         </div>
 
         <div className="timeline-item">
@@ -523,10 +540,7 @@ function Experience() {
           <p className="timeline-date">2019</p>
           <h3>University of Benin</h3>
           <h4> Pharm.D, B.Pharm</h4>
-          <p>
-            Doctor of Pharmacy,
-            Benin City, Nigeria
-          </p>
+          <p>Doctor of Pharmacy, Benin City, Nigeria</p>
         </div>
       </div>
     </section>
@@ -546,8 +560,8 @@ function Contact() {
         </h2>
 
         <p>
-          Open to cloud engineering opportunities, DevOps roles,
-          collaborations and conversations about technology.
+          Open to cloud engineering opportunities, DevOps roles, collaborations
+          and conversations about technology.
         </p>
 
         <a href="mailto:akhigbeblessed@gmail.com" className="primary-btn">
@@ -555,7 +569,11 @@ function Contact() {
         </a>
 
         <div className="contact-socials">
-          <a href="https://github.com/pharmakarios1" target="_blank" rel="noreferrer">
+          <a
+            href="https://github.com/pharmakarios1"
+            target="_blank"
+            rel="noreferrer"
+          >
             <FaGithub size={19} /> GitHub
           </a>
 
